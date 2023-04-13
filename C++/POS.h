@@ -8,4 +8,7 @@ public://アクセス指定子
 	//クラスが管理するデータ
 	double x;
 	double y;
+
+	//クラス内にプロトタイプ宣言
+	void print();
 };

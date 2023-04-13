@@ -127,7 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C++.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="POS.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="POS.h" />
