@@ -1,15 +1,17 @@
 #include <stdio.h>
-#include "POS.h"
+#include "POS.h"//ヘッダファイルを呼び出している。
 
-int POS::setPos(int tmpx,int tmpy)
+//クラスを定義しています。
+void POS::setPos(int tmpx,int tmpy)
 {
+	//データを代入します。
 	x = tmpx;
 	y = tmpy;
 
-	return 0;
 }
 
 void POS::print()
 {
+	//出力するためのデータ挿入
 	printf("x:%d,y:%d\n", x, y);
 }
