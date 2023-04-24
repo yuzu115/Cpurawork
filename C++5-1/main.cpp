@@ -7,6 +7,7 @@ void Viss(const int num);
 
 int main(void)
 {
+
 	CIntArray b(20);
 	Viss(1);
 

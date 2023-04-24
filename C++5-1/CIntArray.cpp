@@ -2,15 +2,21 @@
 #include <memory.h>
 #include "CIntArray.h"
 
+//コンストラクタを呼び出す
 CIntArray::CIntArray(const int nNumOf)
 {
+
 	m_pnum = new int[nNumOf];
+	//条件：null文字が呼ばれたら終了
 	if (m_pnum == NULL)
 	{
+		
 		m_NumOf = 0;
 	}
+	//if文が違ったら、入る
 	else {
 		m_NumOf = nNumOf;
+		//下の条件の間繰り替えす
 		for (int i = 0; i < m_NumOf; i++)
 		{
 			m_pnum[i] = 0;
@@ -21,6 +27,7 @@ CIntArray::CIntArray(const int nNumOf)
 	printf("要素数は%dです\n", m_NumOf);
 }
 
+//デストラクタを呼びだす
 CIntArray::~CIntArray()
 {
 	if(m_pnum!=NULL)
