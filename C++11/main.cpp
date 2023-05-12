@@ -1,7 +1,10 @@
 #include <stdio.h>
 
+//intŒ^a‚ğ‚Â
+//–ß‚è’llongŒ^‚ÌAbs
 long Abs(int a)
 {
+	//longŒ^ret
 	long ret;
 	if (a < 0)
 	{
@@ -12,11 +15,15 @@ long Abs(int a)
 		ret = a;
 	}
 	
+	//•Ô‚è’lret
 	return ret;
 }
 
+//doubleŒ^a‚ğ‚Â
+//–ß‚è’ldoubleŒ^‚ÌAbs
 double Abs(double a)
 {
+	//doubleŒ^ret
 	double ret;
 	if (a < 0)
 	{
