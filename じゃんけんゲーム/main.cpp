@@ -1,7 +1,5 @@
 #include "DxLib.h"
-#include "GameScene.h"
-#include "GameMain.h"
-
+#include "SceneManager.h"
 #include <time.h> // time
 
 #define _SCREEN_HEIGHT_ 720
