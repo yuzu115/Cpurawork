@@ -2,6 +2,7 @@
 #include "DxLib.h"
 #include "Title.h"
 
+
 AbstractScene* GameMain::Update() 
 {
 	return this;

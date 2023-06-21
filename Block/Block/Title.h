@@ -5,10 +5,20 @@ class Title : public AbstractScene
 {
 
 private:
-	
-public:
+	int TitleImage;
 
+	enum class TITLE_MENU {
+		MAIN,
+		GAMEMAIN,
+		END
+	};
+	TITLE_MENU g_MenuNumber;
+
+public:
+	//コンストラクタ
 	Title();
+	//デストラクタ
+	~Title();
 	//描画以外の更新を実行
 	AbstractScene* Update() override;
 	

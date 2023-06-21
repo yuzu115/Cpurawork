@@ -3,6 +3,7 @@
 class GameMain : public AbstractScene
 {
 public:
+	
 	//デストラクタ
 	virtual ~GameMain() {};
 
