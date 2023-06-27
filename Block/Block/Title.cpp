@@ -6,7 +6,7 @@
 //コンストラクタ
 Title::Title()
 {
-	TitleImage = LoadGraph("images/BlockOut1.png");
+	TitleImage = LoadGraph("images/BlockOut2.png");
 }
 
 //デストラクタ
@@ -19,12 +19,14 @@ Title::~Title()
 AbstractScene* Title::Update()
 {
 	//メニューカーソル移動処理
-	if (KeyManager::OnKeyClicked(KEY_INPUT_DOWN)) {
+	if (CheckHitKey(KEY_INPUT_DOWN)) {
+		g_MenuY = g_MenuNumber * 52;
 		DrawCircle(250, 265, 10, 0xff0000, TRUE);
-
+		
 	}
-	if (KeyManager::OnKeyClicked(KEY_INPUT_UP)) {
+	if (CheckHitKey(KEY_INPUT_UP)) {
 		DrawCircle(250, 265, 10, 0xff0000, TRUE);
+		
 	}
 
 	return this;

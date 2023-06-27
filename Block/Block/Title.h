@@ -6,6 +6,7 @@ class Title : public AbstractScene
 
 private:
 	int TitleImage;
+	int g_MenuY;
 
 	enum class TITLE_MENU {
 		MAIN,
