@@ -80,4 +80,5 @@ KEY_INPUT_ADD	    // テンキー＋キー
 KEY_INPUT_SUBTRACT	// テンキー－キー
 KEY_INPUT_DECIMAL	// テンキー．キー
 KEY_INPUT_DIVIDE	// テンキー／キー
-KEY_INPUT_NUMPADENTER	//*/
+KEY_INPUT_NUMPADENTER	//テンキーEnterキー
+*/

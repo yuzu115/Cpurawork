@@ -6,7 +6,7 @@
 //コンストラクタ
 Title::Title()
 {
-	TitleImage = LoadGraph("images/Title.bmp");
+	TitleImage = LoadGraph("images/BlockOut1.png");
 }
 
 //デストラクタ
@@ -20,11 +20,11 @@ AbstractScene* Title::Update()
 {
 	//メニューカーソル移動処理
 	if (KeyManager::OnKeyClicked(KEY_INPUT_DOWN)) {
-		DrawTriangle(220, 255, 220, 280, 270, 270, 0xffffff, TRUE);
+		DrawCircle(250, 265, 10, 0xff0000, TRUE);
 
 	}
 	if (KeyManager::OnKeyClicked(KEY_INPUT_UP)) {
-		
+		DrawCircle(250, 265, 10, 0xff0000, TRUE);
 	}
 
 	return this;
@@ -34,9 +34,14 @@ AbstractScene* Title::Update()
 void Title::Draw() const
 {
 	//タイトル画像表示
-	DrawGraph(0, 0, TitleImage, FALSE);
+	DrawExtendGraph(0, 0, 640, 480, TitleImage, FALSE);
+	//文字の描画
+	SetFontSize(35);
+	DrawString(280, 250, "Start", 0x000000);
+	DrawString(280, 290, "Ranking", 0x000000);
+	DrawString(280, 330, "End", 0x000000);
 
-	//メニューカーソル（三角形）の表示
-	DrawTriangle(220, 255, 220, 280, 270, 270, 0xff0000, TRUE);
+	//メニューカーソル（丸）の表示
+	DrawCircle(250, 265, 10, 0xff0000, TRUE);
 
 }
