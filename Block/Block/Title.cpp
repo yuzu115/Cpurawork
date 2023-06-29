@@ -2,11 +2,12 @@
 #include "DxLib.h"
 #include "GameMain.h"
 #include "KeyManager.h"
+#include "End.h"
 
 //コンストラクタ
 Title::Title()
 {
-	TitleImage = LoadGraph("images/BlockOut2.png");
+	TitleImage = LoadGraph("images/Title.png");
 
 }
 
@@ -32,6 +33,11 @@ AbstractScene* Title::Update()
 	if (KeyManager::OnKeyClicked(KEY_INPUT_LEFT))
 	{
 		return new GameMain();
+	}
+	// GameMainへ画面遷移
+	if (KeyManager::OnKeyClicked(KEY_INPUT_RIGHT))
+	{
+		return new End();
 	}
 
 	g_MenuY = g_MenuNumber * 52;
