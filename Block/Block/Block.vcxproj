@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="End.cpp" />
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="AbstractScene.h" />
     <ClInclude Include="comon.h" />
+    <ClInclude Include="End.h" />
     <ClInclude Include="GameMain.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="SceneManager.h" />

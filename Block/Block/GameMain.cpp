@@ -9,5 +9,6 @@ AbstractScene* GameMain::Update()
 }
 
 void GameMain::Draw()const {
-	printf("GameMain\n");
+	SetFontSize(20);
+	DrawFormatString(0, 30, 0x000000 ,"GameMain",TRUE);
 }

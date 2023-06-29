@@ -7,13 +7,11 @@ class Title : public AbstractScene
 private:
 	int TitleImage;
 	int g_MenuY;
+	int g_MenuNumber = 0;
+	int g_GameState = 0;
+	int g_KeyFlg=0;
 
-	enum class TITLE_MENU {
-		MAIN,
-		GAMEMAIN,
-		END
-	};
-	TITLE_MENU g_MenuNumber;
+	AbstractScene* mScene;
 
 public:
 	//コンストラクタ
