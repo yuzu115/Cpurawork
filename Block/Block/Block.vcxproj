@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="End.cpp" />
     <ClCompile Include="GameMain.cpp" />
-    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Title.cpp" />
@@ -151,7 +151,7 @@
     <ClInclude Include="comon.h" />
     <ClInclude Include="End.h" />
     <ClInclude Include="GameMain.h" />
-    <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="Input.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Title.h" />
   </ItemGroup>

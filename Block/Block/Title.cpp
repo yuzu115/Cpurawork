@@ -1,7 +1,6 @@
 #include "Title.h"
 #include "DxLib.h"
 #include "GameMain.h"
-#include "KeyManager.h"
 #include "End.h"
 
 //コンストラクタ
@@ -20,25 +19,6 @@ Title::~Title()
 //更新
 AbstractScene* Title::Update()
 {
-	KeyManager::Update();
-	// メニューカーソル移動処理
-		if (KeyManager::OnKeyClicked(KEY_INPUT_DOWN)){
-			if (++g_MenuNumber > 2) g_MenuNumber = 0;
-		}
-	if (KeyManager::OnKeyClicked(KEY_INPUT_UP)) {
-		if (--g_MenuNumber < 0) g_MenuNumber = 2;
-	}
-
-	// GameMainへ画面遷移
-	if (KeyManager::OnKeyClicked(KEY_INPUT_LEFT))
-	{
-		return new GameMain();
-	}
-	// GameMainへ画面遷移
-	if (KeyManager::OnKeyClicked(KEY_INPUT_RIGHT))
-	{
-		return new End();
-	}
 
 	g_MenuY = g_MenuNumber * 52;
 
@@ -53,8 +33,7 @@ void Title::Draw() const
 	//文字の描画
 	SetFontSize(35);
 	DrawString(280, 255, "Start", 0x000000);
-	DrawString(280, 310, "Ranking", 0x000000);
-	DrawString(280, 360, "End", 0x000000);
+	DrawString(280, 310, "End", 0x000000);
 
 	//メニューカーソル（三角形）の表示
 	
