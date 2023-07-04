@@ -11,8 +11,6 @@ private:
 	int g_GameState = 0;
 	int g_KeyFlg=0;
 
-	AbstractScene* mScene;
-
 public:
 	//コンストラクタ
 	Title();

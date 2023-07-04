@@ -3,7 +3,7 @@
 class GameMain : public AbstractScene
 {
 private:
-	AbstractScene* mScene;
+
 public:
 	//コンストラクタ
 	GameMain();
