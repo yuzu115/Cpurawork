@@ -2,6 +2,7 @@
 #include "DxLib.h"
 #include "GameMain.h"
 #include "End.h"
+#include "KeyManager.h"
 
 //コンストラクタ
 Title::Title()
@@ -19,7 +20,19 @@ Title::~Title()
 //更新
 AbstractScene* Title::Update()
 {
-
+	KeyManager::Update();
+	if (KeyManager::OnKeyClicked(KEY_INPUT_LEFT)) {
+		return new GameMain;
+	}
+	if (KeyManager::OnKeyClicked(KEY_INPUT_RIGHT)) {
+		return new End;
+	}
+	if (KeyManager::OnKeyClicked(KEY_INPUT_DOWN)) {
+		if (++g_MenuNumber > 1) g_MenuNumber = 0;
+	}
+	if (KeyManager::OnKeyClicked(KEY_INPUT_UP)) {
+		if (--g_MenuNumber < 0) g_MenuNumber = 1;
+	}
 	g_MenuY = g_MenuNumber * 52;
 
 	return this;
