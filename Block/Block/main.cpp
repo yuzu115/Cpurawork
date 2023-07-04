@@ -22,7 +22,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	SetDrawScreen(DX_SCREEN_BACK);	// •`‰ææ‰æ–Ê‚ğ— ‚É‚·‚é
 
 		SceneManager sceneManager(dynamic_cast<AbstractScene*>(new Title));
-
+		//ƒQ[ƒ€ƒ‹[ƒv
 		while (ProcessMessage()!=-1 && sceneManager.Update() != nullptr) {
 			ClearDrawScreen();
 			sceneManager.Draw();
