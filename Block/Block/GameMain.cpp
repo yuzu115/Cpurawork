@@ -9,7 +9,7 @@ AbstractScene* GameMain::Update()
 	return this;
 }
 
-void GameMain::Draw()const {
-	SetFontSize(20);
-	DrawFormatString(0, 30, 0x000000 ,"GameMain",TRUE);
+void GameMain::Draw()const 
+{
+	DrawBox(0, 0, 640, 480, 0x707070, TRUE);
 }
