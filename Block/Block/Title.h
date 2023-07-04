@@ -7,7 +7,7 @@ class Title : public AbstractScene
 private:
 	int TitleImage;
 	int g_MenuY;
-	int g_MenuNumber = 0;
+	int g_MenuNumber;
 	int g_GameState = 0;
 	int g_KeyFlg=0;
 

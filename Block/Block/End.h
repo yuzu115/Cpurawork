@@ -6,6 +6,10 @@ class End : public AbstractScene
 
 private:
 	int EndImage;
+	int g_WaitTime;
+	int g_PosY;
+	int g_MenuNumber;
+
 public:
 	//コンストラクタ
 	End();

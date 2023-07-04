@@ -1,10 +1,11 @@
 #include "GameMain.h"
 #include "DxLib.h"
 #include "Title.h"
-
+#include "Stage.h"
 
 AbstractScene* GameMain::Update() 
 {
+
 	return this;
 }
 
