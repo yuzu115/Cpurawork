@@ -18,6 +18,7 @@ GameMain::GameMain()
 	BallY = 440 - 5;
 	BarX = 290;
 	BarY = 440;
+	Stage = 0;
 
 	BallAngle = 0.625f;
 
@@ -43,10 +44,15 @@ AbstractScene* GameMain::Update()
 	HitBar();     //ボールとバーの当たり判定
 	HitBlock();   //ボールとブロックの当たり判定
 	CheckBlock();
+	InputMouse();
 
 	if (CheckBlock() == 0) 
 	{
 		return new GameClear;
+	}
+	else if (RestBall == 0)
+	{
+		return new GameOver;
 	}
 
 	return this;
@@ -194,4 +200,28 @@ int GameMain::CheckBlock()
 		}
 	}
 	return 0;
+}
+
+void GameMain::InputMouse()
+{
+	//マウスから座標を読み取る1
+	GetMousePoint(&MouseX, &MouseY);
+
+	BarX = MouseX;
+	if (BarX < 0) {
+		BarX = 0;
+	}
+	else if (BarX > 640 - 60) {
+		BarX = 580;
+	}
+
+	KeyManager::Update();
+	//マウス左クリックでゲームスタート
+	if (((KeyManager::OnMouseClicked(MOUSE_INPUT_LEFT)) != 0) && BallFlg == 2) {
+		BallFlg = 0;
+		//スピードとアングルによる移動量計算
+		Speed = 3;
+		BallAngle = 0.625f;
+		ChangeAngle();
+	}
 }

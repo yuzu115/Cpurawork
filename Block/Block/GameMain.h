@@ -12,11 +12,13 @@ private:
 	int BallY;
 	int BarX;
 	int BarY;
-	int BallAngle;
+	float BallAngle;
 	int RestBall;
 	int BallFlg;
 	int MoveX;
 	int MoveY;
+	int MouseX;
+	int MouseY;
 
 	//ブロックデータ（構造体の定義）
 	struct ObjectBlock {
@@ -48,7 +50,7 @@ public:
 	void InitBlock();   //ブロックの初期化
 	void ChangeAngle();
 	int CheckBlock();
-	int ChokBlock();
+	void InputMouse();
 
 	const int g_BlockData[STAGE][HEIGHT][WIDTH] = {	// ブロック配列
 	{	// 0ｽﾃｰｼﾞ
