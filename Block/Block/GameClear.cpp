@@ -4,11 +4,12 @@
 #include "Title.h"
 #include "KeyManager.h"
 #include "GameMain.h"
+int GameClear::Stage;
 
 //コンストラクタ
 GameClear::GameClear()
 {
-
+	//Stage = 0;
 }
 
 //デストラクタ
@@ -21,12 +22,14 @@ GameClear::~GameClear()
 AbstractScene* GameClear::Update()
 {
 	KeyManager::Update();
-	if (KeyManager::OnKeyClicked(KEY_INPUT_C))
+	if (KeyManager::OnKeyClicked(KEY_INPUT_SPACE)&&Stage<4)
 	{
+		Stage += 1;
 		return new GameMain;
 	}
-	if (KeyManager::OnKeyClicked(KEY_INPUT_SPACE))
+	else if (KeyManager::OnKeyClicked(KEY_INPUT_C)||Stage>4)
 	{
+		Stage = 0;
 		return new Title;
 	}
 	return this;
@@ -39,6 +42,10 @@ void GameClear::Draw() const
 	SetFontSize(48);
 	DrawString(200, 200, "GameClear", 0x000000);
 	SetFontSize(30);
-	DrawString(200, 400, "Cキーでゲームメイン", 0x000000);
-	DrawString(200, 350, "SPACEキーでタイトル", 0x000000);
+	if (Stage < 4) {
+		DrawString(200, 400, "SPACEキーでゲームメイン", 0x000000);
+	}
+	else {
+		DrawString(200, 400, "Cキーでタイトル", 0x000000);
+	}
 }

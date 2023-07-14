@@ -14,5 +14,6 @@ public:
 	AbstractScene* Update()override;
 	//•`‰æˆÈŠO‚ÉŠÖ‚·‚é‚±‚Æ‚ðŽÀ‘•
 	void Draw() const override;
+	static int Stage;
 };
 

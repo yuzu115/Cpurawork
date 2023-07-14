@@ -25,7 +25,7 @@ GameMain::GameMain()
 	//ブロック配列の初期化
 	InitBlock();
 
-	RestBall = 2;    //残りボールの設定
+	RestBall = 10;    //残りボールの設定
 	//ブロック画像データの分割読み込み
 	LoadDivGraph("images/Block.bmp", 8, 8, 1, 40, 8, BlockImage);
 }
@@ -168,14 +168,14 @@ void GameMain::InitBlock(void)
 	//ブロック配列の初期化
 	for (int i = 0; i < HEIGHT; i++) {
 		for (int j = 0; j < WIDTH; j++) {
-			if (g_BlockData[Stage][i][j] != 0) {
+			if (g_BlockData[GameClear::Stage][i][j] != 0) {
 				Block[i][j].flg = 1;
 				Block[i][j].x = j * 40;
 				Block[i][j].y = i * 16 + 80;
 				Block[i][j].w = 40;
 				Block[i][j].h = 8;
 				Block[i][j].image = 1;
-				Block[i][j].image = g_BlockData[Stage][i][j];
+				Block[i][j].image = g_BlockData[GameClear::Stage][i][j];
 				Block[i][j].score = Block[i][j].image * 10;
 			}
 		}
