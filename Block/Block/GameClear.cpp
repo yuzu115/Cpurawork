@@ -5,11 +5,12 @@
 #include "KeyManager.h"
 #include "GameMain.h"
 int GameClear::Stage;
+//int GameMain::g_Score;
 
 //コンストラクタ
 GameClear::GameClear()
 {
-	//Stage = 0;
+	//g_Score = 0;
 }
 
 //デストラクタ
@@ -48,4 +49,6 @@ void GameClear::Draw() const
 	else {
 		DrawString(200, 400, "Cキーでタイトル", 0x000000);
 	}
+	SetFontSize(40);
+	DrawFormatString(200, 300, 0xFF0000, "SCORE:%3d", GameMain::g_Score);
 }

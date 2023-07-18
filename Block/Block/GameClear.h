@@ -4,7 +4,7 @@
 class GameClear : public AbstractScene
 {
 private:
-
+	 
 public:
 	//コンストラクタ
 	GameClear();

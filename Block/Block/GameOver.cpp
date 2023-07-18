@@ -2,6 +2,7 @@
 #include "DxLib.h"
 #include "KeyManager.h"
 #include "Title.h"
+#include "GameMain.h"
 
 //コンストラクタ
 GameOver::GameOver()
@@ -33,4 +34,6 @@ void GameOver::Draw() const
 	DrawString(200, 200, "GameOver", 0x000000);
 	SetFontSize(20);
 	DrawString(200, 400, "SPACEキーでタイトル",0x000000);
+	SetFontSize(40);
+	DrawFormatString(200, 300, 0xFF0000, "SCORE:%3d", GameMain::g_Score);
 }

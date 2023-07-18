@@ -7,7 +7,6 @@
 class GameMain : public AbstractScene
 {
 private:
-	int g_Score;
 	int BallX;
 	int BallY;
 	int BarX;
@@ -53,10 +52,11 @@ public:
 	void ChangeAngle();
 	int CheckBlock();
 	void InputMouse();
+	static int g_Score;
 
 	const int g_BlockData[STAGE][HEIGHT][WIDTH] = {	// ブロック配列
 	{	// 0ｽﾃｰｼﾞ
-		{ 0 , 1 , 0 , 1,  0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 },
+		{ 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 },
 		{ 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 },
 		{ 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 },
 		{ 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 },

@@ -8,11 +8,12 @@
 #include "GameClear.h"
 #define _USE_MATH_DEFINES
 #include <math.h>
+int GameMain::g_Score;
 
 //コンストラクタ
 GameMain::GameMain()
 {
-	g_Score = 0;
+	//g_Score = 0;
 	// 変数の初期設定
 	BallX = 320;
 	BallY = 440 - 5;
@@ -75,7 +76,7 @@ void GameMain::Draw()const
 		}
 	}
 	SetFontSize(24);
-	DrawFormatString(20, 20, 0xFF0000, "SCORE:0%6d", g_Score);
+	DrawFormatString(20, 20, 0xFF0000, "SCORE:%3d", g_Score);
 
 	//残りボール数の描画
 	SetFontSize(16);
@@ -220,7 +221,7 @@ void GameMain::InputMouse()
 	if (((KeyManager::OnMouseClicked(MOUSE_INPUT_LEFT)) != 0) && BallFlg == 2) {
 		BallFlg = 0;
 		//スピードとアングルによる移動量計算
-		Speed = 3;
+		Speed = 2;
 		BallAngle = 0.625f;
 		ChangeAngle();
 	}
