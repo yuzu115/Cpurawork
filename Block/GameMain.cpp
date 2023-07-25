@@ -221,7 +221,7 @@ void GameMain::InputMouse()
 	if (((KeyManager::OnMouseClicked(MOUSE_INPUT_LEFT)) != 0) && BallFlg == 2) {
 		BallFlg = 0;
 		//スピードとアングルによる移動量計算
-		Speed = 2;
+		Speed = 3;
 		BallAngle = 0.625f;
 		ChangeAngle();
 	}
