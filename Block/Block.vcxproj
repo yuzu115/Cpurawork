@@ -145,10 +145,10 @@
     <ClCompile Include="..\..\..\Block\GameOver.cpp" />
     <ClCompile Include="..\..\..\Block\KeyManager.cpp" />
     <ClCompile Include="..\..\..\Block\main.cpp" />
-    <ClCompile Include="..\..\..\Block\Ranking.cpp" />
     <ClCompile Include="..\..\..\Block\SceneManager.cpp" />
     <ClCompile Include="..\..\..\Block\Stage.cpp" />
     <ClCompile Include="..\..\..\Block\Title.cpp" />
+    <ClCompile Include="Ranking.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Block\AbstractScene.h" />
@@ -158,10 +158,10 @@
     <ClInclude Include="..\..\..\Block\GameMain.h" />
     <ClInclude Include="..\..\..\Block\GameOver.h" />
     <ClInclude Include="..\..\..\Block\KeyManager.h" />
-    <ClInclude Include="..\..\..\Block\Ranking.h" />
     <ClInclude Include="..\..\..\Block\SceneManager.h" />
     <ClInclude Include="..\..\..\Block\Stage.h" />
     <ClInclude Include="..\..\..\Block\Title.h" />
+    <ClInclude Include="Ranking.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
