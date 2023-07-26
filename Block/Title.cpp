@@ -3,6 +3,7 @@
 #include "GameMain.h"
 #include "End.h"
 #include "KeyManager.h"
+#include "Ranking.h"
 
 //コンストラクタ
 Title::Title()
@@ -26,6 +27,9 @@ AbstractScene* Title::Update()
 	if (KeyManager::OnKeyClicked(KEY_INPUT_Z)) {
 		if (g_MenuNumber == 0) {
 			return new GameMain;
+		}
+		if (g_MenuNumber == 1) {
+			return new Ranking;
 		}
 		if (g_MenuNumber == 2) {
 			return new End;

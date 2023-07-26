@@ -2,19 +2,14 @@
 #include "DxLib.h"
 #include "Title.h"
 #include "KeyManager.h"
+#include "InputRanking.h"
+
+RankingData Ranking::g_Ranking[10];
 
 //コンストラクタ
 Ranking::Ranking()
 {
-	//画像の仮表示
-	ReadRanking(work);
-	SortRanking(work);
-	mScene = nullptr;
-	if (work[4].score < score)
-	{
-		work[4].score = score;
-	 InputRanking(work[4].name));
-	}
+
 }
 
 //デストラクタ
@@ -33,9 +28,7 @@ AbstractScene* Ranking::Update()
 //描画
 void Ranking::Draw() const
 {
-	//ランキング画像表示
-	DrawGraph(0, 0, g_RankingImage, FALSE);
-
+	DrawExtendGraph(0, 0, 640, 480, InputRanking::RankingImage, FALSE);
 	// ランキング一覧を表示
 	SetFontSize(30);
 	for (int i = 0; i < 10; i++) {
@@ -47,7 +40,7 @@ void Ranking::Draw() const
 /***********************************************
  * ランキング並べ替え
  ***********************************************/
-void SortRanking(void)
+void Ranking::SortRanking(void)
 {
 	int i, j;
 	RankingData work;
@@ -80,7 +73,7 @@ void SortRanking(void)
 /***********************************************
  * ランキングデータの保存
  ***********************************************/
-int  SaveRanking(void)
+int Ranking::SaveRanking(void)
 {
 	FILE* fp;
 #pragma warning(disable:4996)
@@ -106,7 +99,7 @@ int  SaveRanking(void)
 /*************************************
  * ランキングデータ読み込み
  *************************************/
-int ReadRanking(void)
+int Ranking::ReadRanking(void)
 {
 	FILE* fp;
 #pragma warning(disable:4996)
