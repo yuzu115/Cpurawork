@@ -139,29 +139,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Block\End.cpp" />
-    <ClCompile Include="..\..\..\Block\GameClear.cpp" />
-    <ClCompile Include="..\..\..\Block\GameMain.cpp" />
-    <ClCompile Include="..\..\..\Block\GameOver.cpp" />
-    <ClCompile Include="..\..\..\Block\KeyManager.cpp" />
-    <ClCompile Include="..\..\..\Block\main.cpp" />
-    <ClCompile Include="..\..\..\Block\SceneManager.cpp" />
-    <ClCompile Include="..\..\..\Block\Stage.cpp" />
-    <ClCompile Include="..\..\..\Block\Title.cpp" />
+    <ClCompile Include="End.cpp" />
+    <ClCompile Include="GameClear.cpp" />
+    <ClCompile Include="GameMain.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Ranking.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Block\AbstractScene.h" />
-    <ClInclude Include="..\..\..\Block\comon.h" />
-    <ClInclude Include="..\..\..\Block\End.h" />
-    <ClInclude Include="..\..\..\Block\GameClear.h" />
-    <ClInclude Include="..\..\..\Block\GameMain.h" />
-    <ClInclude Include="..\..\..\Block\GameOver.h" />
-    <ClInclude Include="..\..\..\Block\KeyManager.h" />
-    <ClInclude Include="..\..\..\Block\SceneManager.h" />
-    <ClInclude Include="..\..\..\Block\Stage.h" />
-    <ClInclude Include="..\..\..\Block\Title.h" />
+    <ClInclude Include="comon.h" />
+    <ClInclude Include="End.h" />
+    <ClInclude Include="GameClear.h" />
+    <ClInclude Include="GameMain.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Ranking.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
