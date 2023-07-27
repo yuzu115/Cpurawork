@@ -33,11 +33,11 @@ AbstractScene* Title::Update()
 	}
 	//下キーでカーソルを下に移動
 	if (KeyManager::OnKeyClicked(KEY_INPUT_DOWN)) {
-		if (++g_MenuNumber > 2) g_MenuNumber = 0;
+		if (++g_MenuNumber > 1) g_MenuNumber = 0;
 	}
 	//上キーでカーソルを上に移動
 	if (KeyManager::OnKeyClicked(KEY_INPUT_UP)) {
-		if (--g_MenuNumber < 0) g_MenuNumber = 2;
+		if (--g_MenuNumber < 0) g_MenuNumber = 1;
 	}
 	g_MenuY = g_MenuNumber * 52;
 
@@ -55,6 +55,6 @@ void Title::Draw() const
 	DrawString(280, 310, "End", 0x000000);
 
 	//メニューカーソル（三角形）の表示
-	DrawTriangle(240, 255 + g_MenuY, 260, 270 + g_MenuY, 240, 285 + g_MenuY, GetColor(255, 0, 0), TRUE);
+	DrawTriangle(240, 255 + g_MenuY, 260, 270 + g_MenuY, 240, 285 + g_MenuY, 0x00bfff, TRUE);
 	
 }
