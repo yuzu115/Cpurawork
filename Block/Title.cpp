@@ -53,6 +53,9 @@ void Title::Draw() const
 	SetFontSize(35);
 	DrawString(280, 255, "Start", 0x000000);
 	DrawString(280, 310, "End", 0x000000);
+	//メニュー選択
+	SetFontSize(25);
+	DrawString(120, 400, "キーボードZキーでメニュー選択", 0x000000);
 
 	//メニューカーソル（三角形）の表示
 	DrawTriangle(240, 255 + g_MenuY, 260, 270 + g_MenuY, 240, 285 + g_MenuY, 0x00bfff, TRUE);
