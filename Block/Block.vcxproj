@@ -143,12 +143,9 @@
     <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="GameOver.cpp" />
-    <ClCompile Include="InputRanking.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Ranking.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -158,11 +155,8 @@
     <ClInclude Include="GameClear.h" />
     <ClInclude Include="GameMain.h" />
     <ClInclude Include="GameOver.h" />
-    <ClInclude Include="InputRanking.h" />
     <ClInclude Include="KeyManager.h" />
-    <ClInclude Include="Ranking.h" />
     <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="Stage.h" />
     <ClInclude Include="Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

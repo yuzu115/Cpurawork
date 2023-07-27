@@ -3,7 +3,6 @@
 #include "GameMain.h"
 #include "End.h"
 #include "KeyManager.h"
-#include "Ranking.h"
 
 //コンストラクタ
 Title::Title()
@@ -29,9 +28,6 @@ AbstractScene* Title::Update()
 			return new GameMain;
 		}
 		if (g_MenuNumber == 1) {
-			return new Ranking;
-		}
-		if (g_MenuNumber == 2) {
 			return new End;
 		}
 	}
@@ -56,8 +52,7 @@ void Title::Draw() const
 	//文字の描画
 	SetFontSize(35);
 	DrawString(280, 255, "Start", 0x000000);
-	DrawString(280, 310, "Ranking", 0x000000);
-	DrawString(280, 365, "End", 0x000000);
+	DrawString(280, 310, "End", 0x000000);
 
 	//メニューカーソル（三角形）の表示
 	DrawTriangle(240, 255 + g_MenuY, 260, 270 + g_MenuY, 240, 285 + g_MenuY, GetColor(255, 0, 0), TRUE);

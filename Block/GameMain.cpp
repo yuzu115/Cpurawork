@@ -1,7 +1,6 @@
 #include "GameMain.h"
 #include "DxLib.h"
 #include "Title.h"
-#include "Stage.h"
 #include "KeyManager.h"
 #include "End.h"
 #include "GameOver.h"
