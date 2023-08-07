@@ -3,6 +3,7 @@
 #include "AbstractScene.h"
 #include "SceneManager.h"
 #include "GameMain.h"
+#include "KeyManager.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine, int nCmdShow)
@@ -21,7 +22,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 	SceneManager sceneManager(dynamic_cast<AbstractScene*>(new GameMain));
 	//ÉQÅ[ÉÄÉãÅ[Év
-	while (ProcessMessage() != -1 && sceneManager.Update() != nullptr) {
+	KeyManager::Update();
+	while (ProcessMessage() != -1 && sceneManager.Update() != nullptr/* && KeyManager::OnKeyClicked(KEY_INPUT_ESCAPE)*/) {
 		ClearDrawScreen();
 		sceneManager.Draw();
 		ScreenFlip();
