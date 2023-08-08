@@ -30,4 +30,5 @@ AbstractScene* Title::Update()
 void Title::Draw() const
 {
 	DrawGraph(0, 0, TitleImage, FALSE);
+	DrawCircle(790, 430, 20, 0xffff00, TRUE);
 }

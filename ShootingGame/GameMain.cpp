@@ -21,5 +21,6 @@ AbstractScene* GameMain::Update()
 //•`‰æ
 void GameMain::Draw() const
 {
-	
+	SetFontSize(100);
+	DrawString(400, 300, "GameMain", 0xffffff);
 }

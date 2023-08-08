@@ -21,7 +21,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 	SetDrawScreen(DX_SCREEN_BACK);	// •`‰ææ‰æ–Ê‚ğ— ‚É‚·‚é
 
-	SceneManager sceneManager(dynamic_cast<AbstractScene*>(new Title));
+	SceneManager sceneManager(dynamic_cast<AbstractScene*>(new GameMain));
 	//ƒQ[ƒ€ƒ‹[ƒv
 	KeyManager::Update();
 	while (ProcessMessage() != -1 && sceneManager.Update() != nullptr/* && KeyManager::OnKeyClicked(KEY_INPUT_ESCAPE)*/) {
