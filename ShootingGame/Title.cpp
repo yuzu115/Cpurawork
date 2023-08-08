@@ -1,10 +1,12 @@
 #include "Title.h"
 #include "DxLib.h"
+#include "KeyManager.h"
+#include "GameMain.h"
 
 //コンストラクタ
 Title::Title()
 {
-	TitleImage = LoadGraph("images/Title.jpg");
+	TitleImage = LoadGraph("images/Title.png");
 }
 
 //デストラクタ
@@ -16,6 +18,11 @@ Title::~Title()
 //更新
 AbstractScene* Title::Update()
 {
+	KeyManager::Update();
+	if (KeyManager::OnKeyClicked(KEY_INPUT_Z))
+	{
+		return new GameMain;
+	}
 	return this;
 }
 
