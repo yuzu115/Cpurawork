@@ -3,6 +3,7 @@
 
 End::End()
 {
+	EndImage = LoadGraph("images/End.png");
 	g_WaitTime = 0;
 
 }
@@ -25,6 +26,8 @@ AbstractScene* End::Update()
 
 void End::Draw()const
 {
+	DrawGraph(0, 0, EndImage, FALSE);
+
 	SetFontSize(50);
 	DrawString(100, 170 + g_PosY, "タイトル　　　Game　Title", 0xffffff);
 	DrawString(100, 220 + g_PosY, "バージョン　　1.0", 0xffffff);

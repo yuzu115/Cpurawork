@@ -7,7 +7,8 @@
 //コンストラクタ
 GameMain::GameMain()
 {
-
+	life = 0;
+	player = 0;
 }
 
 //デストラクタ
@@ -19,8 +20,8 @@ GameMain::~GameMain()
 //更新
 AbstractScene* GameMain::Update()
 {
-	HitCheck;
-	SpawnBullet;
+	//HitCheck;
+	//SpawnBullet;
 
 	KeyManager::Update();
 	if (KeyManager::OnKeyClicked(KEY_INPUT_SPACE))
@@ -39,14 +40,17 @@ void GameMain::Draw() const
 {
 	SetFontSize(100);
 	DrawString(400, 300, "GameMain", 0xffffff);
+	SetFontSize(30);
+	DrawString(400, 500, "Spaceキーでゲームオーバーへ", 0xffffff);
+	DrawString(400, 550, "Eキーでゲームクリアへ", 0xffffff);
 }
 
-void GameMain::HitCheck()
-{
-
-}
-
-void GameMain::SpawnBullet()
-{
-
-}
+//void GameMain::HitCheck()
+//{
+//
+//}
+//
+//void GameMain::SpawnBullet()
+//{
+//
+//}
