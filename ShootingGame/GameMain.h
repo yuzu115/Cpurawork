@@ -2,6 +2,9 @@
 #include "AbstractScene.h"
 class GameMain :public AbstractScene
 {
+private:
+	int player;
+	int life;
 public:
 	//コンストラクタ
 	GameMain();
@@ -12,5 +15,7 @@ public:
 	//描画以外に関することを実装
 	void Draw() const override;
 
+	void HitCheck();
+	void SpawnBullet();
 };
 

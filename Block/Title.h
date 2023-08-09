@@ -8,8 +8,6 @@ private:
 	int TitleImage;
 	int g_MenuY;
 	int g_MenuNumber;
-	int g_GameState = 0;
-	int g_KeyFlg=0;
 
 public:
 	//コンストラクタ

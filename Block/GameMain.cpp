@@ -109,7 +109,6 @@ void GameMain::MoveBall(void)
 		BallAngle = (1 - BallAngle);
 		ChangeAngle();
 	}
-	//if (BallY > 480 + 4)g_GameState = 5;
 	if (BallY > 480 + 4) {
 		//ボールをスタート状態にする
 		BallFlg = 2;

@@ -23,7 +23,8 @@ AbstractScene* Title::Update()
 {
 	KeyManager::Update();
 	//‰æ–Ê‘JˆÚ
-	if (KeyManager::OnKeyClicked(KEY_INPUT_Z)) {
+	if (KeyManager::OnKeyClicked(KEY_INPUT_Z)) 
+		{
 		if (g_MenuNumber == 0) {
 			return new GameMain;
 		}

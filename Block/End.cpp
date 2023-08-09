@@ -6,7 +6,6 @@ End::End()
 {
 	EndImage = LoadGraph("images/End.png");
 	g_WaitTime = 0;
-	g_MenuNumber = 0;
 }
 
 //デストラクタ
