@@ -41,12 +41,12 @@ void GameMain::Draw() const
 	DrawString(400, 300, "GameMain", 0xffffff);
 }
 
-void HitCheck()
+void GameMain::HitCheck()
 {
 
 }
 
-void SpawnBullet()
+void GameMain::SpawnBullet()
 {
 
 }
