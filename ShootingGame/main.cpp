@@ -24,7 +24,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	SceneManager sceneManager(dynamic_cast<AbstractScene*>(new Title));
 	//ÉQÅ[ÉÄÉãÅ[Év
 	KeyManager::Update();
-	while (ProcessMessage() != -1 && sceneManager.Update() != nullptr/* && KeyManager::OnKeyClicked(KEY_INPUT_ESCAPE)*/) {
+	while (ProcessMessage() != -1 && sceneManager.Update() != nullptr) {
 		ClearDrawScreen();
 		sceneManager.Draw();
 		ScreenFlip();

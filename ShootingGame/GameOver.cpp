@@ -2,6 +2,7 @@
 #include "DxLib.h"
 #include "Title.h"
 #include "KeyManager.h"
+#include "PadInput.h"
 
 GameOver::GameOver()
 {
@@ -15,8 +16,8 @@ GameOver::~GameOver()
 
 AbstractScene* GameOver::Update()
 {
-	KeyManager::Update();
-	if (KeyManager::OnKeyClicked(KEY_INPUT_A))
+	PAD_INPUT::UpdateKey();
+	if (PAD_INPUT::OnButton(XINPUT_BUTTON_A))
 	{
 		return new Title;
 	}

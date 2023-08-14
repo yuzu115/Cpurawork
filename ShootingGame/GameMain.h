@@ -3,8 +3,9 @@
 class GameMain :public AbstractScene
 {
 private:
-	int player;
+	float player;
 	int life;
+	float inputX;
 public:
 	//コンストラクタ
 	GameMain();
