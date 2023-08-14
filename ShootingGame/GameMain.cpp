@@ -24,14 +24,15 @@ AbstractScene* GameMain::Update()
 	//SpawnBullet;
 	
 	PAD_INPUT::UpdateKey();
-	if (PAD_INPUT::OnButton(XINPUT_BUTTON_B))
+	if (PAD_INPUT::OnButton(XINPUT_BUTTON_A))
 	{
 		return new GameOver;
 	}
-	if (PAD_INPUT::OnButton(XINPUT_BUTTON_Y))
+	if (PAD_INPUT::OnButton(XINPUT_BUTTON_B))
 	{
 		return new GameClear;
 	}
+
 	return this;
 }
 
@@ -40,8 +41,8 @@ void GameMain::Draw() const
 {
 	DrawCircle(50, 50, 10, 0xffff00, TRUE);
 	SetFontSize(30);
-	DrawString(400, 500, "Bキーでゲームオーバーへ", 0xffffff);
-	DrawString(400, 550, "Yキーでゲームクリアへ", 0xffffff);
+	DrawString(400, 500, "Aキーでゲームオーバーへ", 0xffffff);
+	DrawString(400, 550, "Bキーでゲームクリアへ", 0xffffff);
 }
 
 void GameMain::HitCheck()

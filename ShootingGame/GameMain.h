@@ -5,7 +5,13 @@ class GameMain :public AbstractScene
 private:
 	float player;
 	int life;
+
 	float inputX;
+	short ThumbLX;
+	short ThumbLY;
+	short ThumbRX;
+	short ThumbRY;
+
 public:
 	//コンストラクタ
 	GameMain();
