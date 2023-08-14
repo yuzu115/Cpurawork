@@ -28,5 +28,5 @@ void GameClear::Draw()const
 	SetFontSize(100);
 	DrawString(400, 300, "GameClear", 0xffffff);
 	SetFontSize(30);
-	DrawString(400, 500, "Eキーでランキングへ", 0xffffff);
+	DrawString(400, 500, "Bキーでランキングへ", 0xffffff);
 }

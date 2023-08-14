@@ -27,4 +27,6 @@ void Ranking::Draw()const
 {
 	SetFontSize(100);
 	DrawString(400, 300, "Ranking", 0xffffff);
+	SetFontSize(30);
+	DrawString(400, 500, "Cキーでタイトルへ", 0xffffff);
 }

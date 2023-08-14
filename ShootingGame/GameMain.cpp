@@ -38,8 +38,7 @@ AbstractScene* GameMain::Update()
 //描画
 void GameMain::Draw() const
 {
-	SetFontSize(100);
-	DrawString(400, 300, "GameMain", 0xffffff);
+	DrawCircle(50, 50, 10, 0xffff00, TRUE);
 	SetFontSize(30);
 	DrawString(400, 500, "Spaceキーでゲームオーバーへ", 0xffffff);
 	DrawString(400, 550, "Eキーでゲームクリアへ", 0xffffff);
