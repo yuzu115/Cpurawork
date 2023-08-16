@@ -1,17 +1,24 @@
 #pragma once
 #include "AbstractScene.h"
 
-class End :public AbstractScene
+class End : public AbstractScene
 {
 private:
-	int g_WaitTime;
-	int g_PosY;
-	int EndImage;
+    int WaitTime;   //終了までの時間
+    int MoveString; //エンドロール用
+    int TitleImage;  //画像用
+    int EndFont1;
+    int EndFont2;
+    int EndFont3;
+
 
 public:
-	End();
-	~End();
-	AbstractScene* Update()override;
-	void Draw()const override;
+    //コンストラクタ
+    End();
+    //デストラクタ
+    ~End();
+    //描画以外の更新を実行
+    AbstractScene* Update() override;
+    //描画に関することを実装
+    void Draw()const;
 };
-
