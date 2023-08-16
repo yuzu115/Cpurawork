@@ -1,14 +1,16 @@
 #pragma once
 #include "AbstractScene.h"
+#include "Player.h"
 class GameMain :public AbstractScene
 {
 private:
 	float player;
 	int life;
 	short JoyPadX;
+	Player* player1;
 	int g_MenuX;
-	int g_Player;
 	int mainImage;
+	int g_Player;
 
 public:
 	//コンストラクタ
