@@ -1,5 +1,7 @@
 #pragma once
 #include "AbstractScene.h"
+#define TIME_LIMIT 300
+#define MOVE_SPEED 7
 
 class End : public AbstractScene
 {

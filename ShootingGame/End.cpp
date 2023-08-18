@@ -2,8 +2,6 @@
 #include"DxLib.h"
 #include"End.h"
 
-#define TIME_LIMIT 300
-#define MOVE_SPEED 7
 
 End::End() {
 	//‰Šú‰»
