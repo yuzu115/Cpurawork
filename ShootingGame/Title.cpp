@@ -19,7 +19,8 @@ Title::Title()
 AbstractScene* Title::Update()
 {
 	PAD_INPUT::UpdateKey();
-	if (PAD_INPUT::OnButton(XINPUT_BUTTON_A))
+	KeyManager::Update();
+	if (PAD_INPUT::OnButton(XINPUT_BUTTON_A)||KeyManager::OnKeyClicked(KEY_INPUT_Z))
 	{
 		if (g_MenuNumber == 0) {
 			return new GameMain;
@@ -33,11 +34,11 @@ AbstractScene* Title::Update()
 		}
 	}
 	//下キーでカーソルを下に移動
-	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_DOWN)) {
+	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_DOWN)||KeyManager::OnKeyClicked(KEY_INPUT_DOWN)) {
 		if (++g_MenuNumber > 2) g_MenuNumber = 0;
 	}
 	//上キーでカーソルを上に移動
-	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_UP)) {
+	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_UP)||KeyManager::OnKeyClicked(KEY_INPUT_UP)) {
 		if (--g_MenuNumber < 0) g_MenuNumber = 2;
 	}
 	g_MenuY = g_MenuNumber * 82;
