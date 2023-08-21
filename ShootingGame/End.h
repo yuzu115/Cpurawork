@@ -1,19 +1,13 @@
 #pragma once
 #include "AbstractScene.h"
-#define TIME_LIMIT 300
-#define MOVE_SPEED 7
 
 class End : public AbstractScene
 {
 private:
-    int WaitTime;   //終了までの時間
-    int MoveString; //エンドロール用
-    int TitleImage;  //画像用
-    int EndFont1;
-    int EndFont2;
-    int EndFont3;
-
-
+    int g_WaitTime;   //終了までの時間
+    int g_PosY; //エンドロール用
+    int EndImage;  //画像用
+    
 public:
     //コンストラクタ
     End();
