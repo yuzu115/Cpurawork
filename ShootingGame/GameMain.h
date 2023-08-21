@@ -15,6 +15,7 @@ private:
 	int g_Player;
 
 	Enemy* enemy;
+	Bullet* bullet;
 
 public:
 	//コンストラクタ

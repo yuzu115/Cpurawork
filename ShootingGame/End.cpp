@@ -18,9 +18,9 @@ End::~End()
 AbstractScene* End::Update()
 {
 	//エンディング表示
-	if (++g_WaitTime < 600) g_PosY = 300 - g_WaitTime / 2;
+	if (++g_WaitTime < 1200) g_PosY = 600 - g_WaitTime / 2;
 	//タイムの加算処理＆終了
-	if (++g_WaitTime > 900) {
+	if (++g_WaitTime > 1400) {
 		return nullptr;
 	}
 	return this;

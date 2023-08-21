@@ -3,6 +3,8 @@ class Bullet
 {
 private:
 	int movebullet;
+	int g_bullet;
+	int g_menux;
 
 public:
 	Bullet();

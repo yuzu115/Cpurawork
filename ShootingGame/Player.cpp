@@ -19,6 +19,7 @@ Player::~Player()
 
 void Player::PlayerUpdate()
 {
+	bullet->BnlletUpdate();
 	
 	//左キーでカーソルを左に移動
 	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_LEFT) || KeyManager::OnKeyClicked(KEY_INPUT_LEFT)) {
