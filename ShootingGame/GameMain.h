@@ -1,6 +1,8 @@
 #pragma once
 #include "AbstractScene.h"
 #include "Player.h"
+#include "Enemy.h"
+
 class GameMain :public AbstractScene
 {
 private:
@@ -11,6 +13,8 @@ private:
 	int g_MenuX;
 	int mainImage;
 	int g_Player;
+
+	Enemy* enemy;
 
 public:
 	//コンストラクタ

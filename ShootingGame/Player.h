@@ -1,4 +1,5 @@
 #pragma once
+#include "Bullet.h"
 
 class Player 
 {
@@ -6,13 +7,15 @@ private:
 
 	int g_MenuX;
 	int g_Player;
-	int mainImage;
+	int PlayerImage;
+
+	Bullet* bullet;
 
 public:
 	Player();
 	~Player();
 
-	void Update();
+	void PlayerUpdate();
 	//•`‰æ
 	void Draw()const;
 

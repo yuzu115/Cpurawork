@@ -7,8 +7,9 @@
 
 Player::Player()
 {
-	mainImage = LoadGraph("images/paper areplane.png");
+	PlayerImage = LoadGraph("images/paper areplane.png");
 	g_Player = 0;
+	bullet = new Bullet;
 }
 
 Player::~Player()
@@ -16,11 +17,9 @@ Player::~Player()
 
 }
 
-void Player::Update()
+void Player::PlayerUpdate()
 {
-	PAD_INPUT::UpdateKey();
-	KeyManager::Update();
-
+	
 	//左キーでカーソルを左に移動
 	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_LEFT) || KeyManager::OnKeyClicked(KEY_INPUT_LEFT)) {
 		--g_Player > 10;
@@ -36,5 +35,6 @@ void Player::Draw() const
 {
 
 	//プレイヤーの仮表示
-	DrawGraph(50 + g_MenuX, 500, mainImage, TRUE);
+	DrawGraph(50 + g_MenuX, 500, PlayerImage, TRUE);
+	bullet->BUlletDraw();
 }
