@@ -1,8 +1,9 @@
 #pragma once
+#include "Player.h"
+
 class Bullet
 {
 private:
-	int movebullet;
 	int g_bullet;
 	int g_menux;
 
