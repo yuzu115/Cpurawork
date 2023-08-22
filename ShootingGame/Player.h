@@ -9,7 +9,7 @@ private:
 	int g_Player;
 	int PlayerImage;
 
-	Bullet* bullet;
+	Bullet * bullet;
 
 public:
 	Player();

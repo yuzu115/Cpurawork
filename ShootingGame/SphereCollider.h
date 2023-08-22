@@ -6,10 +6,6 @@ private:
 	int radius;
 
 public:
-	SphereCollider();
-	~SphereCollider();
-
-	void CheckHitCollision();
 
 };
 

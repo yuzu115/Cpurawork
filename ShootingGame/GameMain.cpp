@@ -40,7 +40,6 @@ AbstractScene* GameMain::Update()
 	}
 
 	player1->PlayerUpdate();
-	bullet->BnlletUpdate();
 
 	return this;
 }

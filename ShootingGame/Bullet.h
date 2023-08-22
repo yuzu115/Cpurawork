@@ -1,7 +1,7 @@
 #pragma once
-#include "Player.h"
+#include "SphereCollider.h"
 
-class Bullet
+class Bullet :public SphereCollider
 {
 private:
 	int g_bullet;
@@ -10,7 +10,7 @@ private:
 public:
 	Bullet();
 	~Bullet();
-	void BnlletUpdate();
+	void BulletUpdate();
 	void BUlletDraw();
 };
 

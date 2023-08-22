@@ -18,16 +18,10 @@ Player::~Player()
 }
 
 void Player::PlayerUpdate()
-{
-	bullet->BnlletUpdate();
-	
+{	
 	//左キーでカーソルを左に移動
 	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_LEFT) || KeyManager::OnKeyClicked(KEY_INPUT_LEFT)) {
 		--g_Player > 10;
-		if (PAD_INPUT::OnPressed(XINPUT_BUTTON_RIGHT_SHOULDER) || KeyManager::OnKeyPressed(KEY_INPUT_UP))
-		{
-			DrawCircle(101 + g_Player, 490, 5, 0xffff00, TRUE);
-		}
 	}
 	//右キーでカーソルを右に移動
 	if (PAD_INPUT::OnButton(XINPUT_BUTTON_DPAD_RIGHT) || KeyManager::OnKeyClicked(KEY_INPUT_RIGHT)) {
