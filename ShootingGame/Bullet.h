@@ -6,6 +6,8 @@ class Bullet :public SphereCollider
 private:
 	int g_bullet;
 	int g_menux;
+	int WaitTime;
+
 
 public:
 	Bullet();

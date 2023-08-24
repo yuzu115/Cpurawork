@@ -54,7 +54,7 @@ void GameMain::Draw() const
 
 	player1 -> Draw();
 	enemy->EnemyDraw();
-	bullet->BUlletDraw();
+	
 }
 
 void GameMain::HitCheck()
