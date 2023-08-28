@@ -10,5 +10,6 @@ public:
 	~Enemy();
 	void EnemyUpdate();
 	void EnemyDraw();
+
 };
 

@@ -8,6 +8,8 @@ private:
 public:
 	CharaBase();
 	~CharaBase();
+	void CharaBaseUpdate();
+	void CharaBaseDraw();
 
 };
 
