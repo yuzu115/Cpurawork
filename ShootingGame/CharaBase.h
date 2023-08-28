@@ -1,5 +1,13 @@
 #pragma once
-class CharaBase
+#include "SphereCollider.h"
+
+class CharaBase :public SphereCollider
 {
+private:
+
+public:
+	CharaBase();
+	~CharaBase();
+
 };
 

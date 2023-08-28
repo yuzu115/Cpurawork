@@ -1,7 +1,8 @@
 #pragma once
 #include "Bullet.h"
+#include "CharaBase.h"
 
-class Player 
+class Player :public CharaBase
 {
 private:
 

@@ -1,5 +1,7 @@
 #pragma once
-class NwaysSpawner
+#include "BulletSpawner.h"
+
+class NwaysSpawner :public BulletSpawner
 {
 };
 
