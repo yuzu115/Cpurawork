@@ -28,6 +28,7 @@ AbstractScene* GameMain::Update()
 {
 	//HitCheck;
 	//SpawnBullet;
+	//‰æ–Ê‘JˆÚ
 	PAD_INPUT::UpdateKey();
 	KeyManager::Update();
 	if (PAD_INPUT::OnButton(XINPUT_BUTTON_A)||KeyManager::OnKeyClicked(KEY_INPUT_A))

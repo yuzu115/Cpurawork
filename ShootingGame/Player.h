@@ -10,6 +10,7 @@ private:
 	int g_Player;
 	int PlayerImage;
 
+	//’eƒNƒ‰ƒX‚ÌŒÄ‚Ño‚µ
 	Bullet * bullet;
 
 public:

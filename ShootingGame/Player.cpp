@@ -5,6 +5,7 @@
 #include "GameClear.h"
 #include "GameOver.h"
 
+//コンストラクタ
 Player::Player()
 {
 	PlayerImage = LoadGraph("images/paper areplane.png");
@@ -12,11 +13,13 @@ Player::Player()
 	bullet = new Bullet;
 }
 
+//デストラクタ
 Player::~Player()
 {
 
 }
 
+//更新
 void Player::PlayerUpdate()
 {	
 	//左キーでカーソルを左に移動
@@ -30,6 +33,7 @@ void Player::PlayerUpdate()
 	g_MenuX = g_Player * 150;
 }
 
+//描画
 void Player::Draw() const
 {
 

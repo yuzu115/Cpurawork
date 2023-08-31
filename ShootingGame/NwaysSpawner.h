@@ -3,5 +3,9 @@
 
 class NwaysSpawner :public BulletSpawner
 {
+private:
+
+public:
+
 };
 
